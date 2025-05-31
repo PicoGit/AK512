@@ -2,7 +2,7 @@
 /**
 * @file		CAN_Driver.c
 * @brief	CANモジュールに関するドライバ関数
-* @date		24/07/16
+* @date		25/05/31
 * @details	
 * @note		
 */
@@ -2177,7 +2177,7 @@ void vdg_CAN1_SendTest_TXQ(void)
 /*----------------------------------------------------------------------------*/
 /*
 * @fn        vdg_CAN1_SendTest_Fifo(void) 
-* @brief        Fifoでの送信テスト
+* @brief     Fifoでの送信テスト
 * @param
 * @return
 * @detail 
@@ -2248,7 +2248,7 @@ void vdg_CAN1_SendTest_Fifo(void)
 /*----------------------------------------------------------------------------*/
 /*
 * @fn        vdg_CAN1_SendTest_Fifo(void)
-* @brief        Fifoでの送信テスト
+* @brief     Fifoでの送信テスト
 * @param
 * @return
 * @detail    CAN受信割り込みもしくは定期イベントでコール 
@@ -2425,5 +2425,8 @@ void vdg_CAN_Set_Register(void)
 
 
 #endif
+
+
+
 
 
