@@ -2,7 +2,7 @@
 /**
 * @file		Peripheral_Init.c
 * @brief	周辺モジュール初期化に関するドライバ関数
-* @date		24/07/16
+* @date		25/05/31
 * @details	
 * @note		
 */
@@ -41,8 +41,6 @@
 #include "msi_driver.h"
 #include "nvm_driver.h"
 #include "opamp_driver.h"
-#include "other_driver.h"
-#include "pga_driver.h"
 #include "pmd_driver.h"
 #include "port_driver.h"
 #include "security_driver.h"
@@ -53,13 +51,13 @@
 #include "refo_driver.h"
 #include "remappin_driver.h"
 #include "sent_driver.h"
-#include "sm_driver.h"
+#include "uref_driver.h"
 #include "spi_driver.h"
 #include "timer_driver.h"
 #include "uart_driver.h"
 #include "wdt_driver.h"
 #include "pac_driver.h"
-
+#include "crypt_driver.h"
 /*----------------------------------------------------------------------------*/
 /*定数定義*/
 /*----------------------------------------------------------------------------*/
@@ -79,7 +77,6 @@ void vdg_Peripheral_Init(void)
 		vdg_Cache_Set_Register();
 		vdg_BMX_Set_Register();
 		vdg_HPC_Set_Register();
-		vdg_SM_Set_Register();
     /*----------------------------------------------------------------------------*/
     /*【****】モジュール共通設定*/
     /*----------------------------------------------------------------------------*/
@@ -132,9 +129,9 @@ void vdg_Peripheral_Init(void)
         vdg_CRC_Set_Register();
         vdg_PTG_Set_Register();
         vdg_NVM_Set_Register();
-        vdg_Other_Set_Register();
-		vdg_Security_Set_Register();
-		vdg_PWB_Set_Register();
-		vdg_MBIST_Set_Register();
+        vdg_Crypt_Set_Register();
+	vdg_Security_Set_Register();
+	vdg_PWB_Set_Register();
+	vdg_MBIST_Set_Register();
 		
 }
